@@ -23,6 +23,7 @@ async function fetchMovieNews() {
                     <img src="${newsItem.image}" alt="Descrição da imagem">
                     <h2>${newsItem.title}</h2>
                     <p>${newsItem.writer}</p>
+                    <a class="btn btn-success" href="${newsItem.link} target="_blank" ">see more...</a>
                     <p>${newsItem.date}</p>
                 `;
                 newsContainer.appendChild(newsElement);

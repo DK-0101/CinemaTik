@@ -87,7 +87,7 @@
 }
 
 .movie-news h2 {
-    padding-left: 15px;
+    padding: 15px;
     text-transform: uppercase;
     font-weight: 600;
     color: rgb(39, 15, 59);
@@ -95,13 +95,25 @@
 }
 
 .movie-news p {
-    padding-left: 15px;
+    margin-left: 15px;
 }
 
 .movie-news img {
     width: 300px;
     height: 300px;
     padding: 3rem;
+}
+
+.movie-news a {
+    margin-left: 15px;
+    font-size: 13px;
+    background-color: #1e1e1e;
+    border: none;
+    text-decoration: none;
+}
+
+.movie-news a:hover {
+    background-color: rebeccapurple;
 }
 
 .contentNews {
@@ -282,10 +294,19 @@ img {
     }
 
     .movie-news {
+        display: flex;
+        flex-direction: column;
         height: 500px;
     }
     
     .movie-news h2, p {
         font-size: 10px;
+    }
+
+    .movie-news a {
+        font-size: 7px;
+        font-weight: 500;
+        width: 70px;
+        margin-bottom: 10px;
     }
 }
