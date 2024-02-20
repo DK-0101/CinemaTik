@@ -7,7 +7,10 @@ const options = {
     }
 };
 
+
+
 async function fetchMovieNews() {
+    
     try {
         const response = await axios.request(options);
         const newsContainer = document.getElementById('newsContainer');
@@ -31,6 +34,8 @@ async function fetchMovieNews() {
         console.error(error);
     }
 }
+
+
 
 
 fetchMovieNews();
