@@ -1,4 +1,4 @@
-// Função para puxar as top celebrities da API
+
 function getTopCelebrities() {
     const options = {
         method: 'GET',
@@ -37,10 +37,9 @@ function displayCelebrityDetails(celebrity) {
     const modal = document.getElementById('modal');
     const celebrityDetails = document.getElementById('celebrityDetails');
 
-    // Limpar o conteúdo anterior
+ 
     celebrityDetails.innerHTML = '';
 
-    // Adicionar detalhes da celebridade ao modal
     const name = document.createElement('p');
     name.textContent = `Nome: ${celebrity.name || 'Não disponível'}`;
     celebrityDetails.appendChild(name);
@@ -64,16 +63,16 @@ function displayCelebrityDetails(celebrity) {
         celebrityDetails.appendChild(noImage);
     }
 
-    // Exibir o modal
+   
     modal.style.display = 'block';
 
-    // Fechar o modal quando clicar no botão de fechar (X)
+ 
     const closeButton = document.getElementsByClassName('close')[0];
     closeButton.onclick = function() {
         modal.style.display = 'none';
     }
 
-    // Fechar o modal quando clicar fora do modal
+   
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = 'none';

@@ -1,4 +1,4 @@
-// Função para puxar os top filmes da API
+
 function getTopMovies() {
   const options = {
       method: 'GET',
@@ -36,10 +36,10 @@ function displayMovieDetails(movie) {
   const modal = document.getElementById('modal');
   const movieDetails = document.getElementById('movieDetails');
 
-  // Limpar o conteúdo anterior
+  
   movieDetails.innerHTML = '';
 
-  // Adicionar detalhes do filme ao modal
+ 
   const title = document.createElement('p');
   title.textContent = `Title: ${movie.title || 'Não disponível'}`;
   movieDetails.appendChild(title);
@@ -72,16 +72,16 @@ function displayMovieDetails(movie) {
 
 
 
-  // Exibir o modal
+ 
   modal.style.display = 'block';
 
-  // Fechar o modal quando clicar no botão de fechar (X)
+
   const closeButton = document.querySelector('.close');
   closeButton.onclick = function() {
       modal.style.display = 'none';
   }
 
-  // Fechar o modal quando clicar fora do modal
+
   window.onclick = function(event) {
       if (event.target == modal) {
           modal.style.display = 'none';
